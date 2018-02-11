@@ -55,7 +55,9 @@ func (q *Question) cropped() {
 }
 
 func (q *Question) inversion() {
-	q.Antonym = strings.Count(q.MainText, "不")%2 == 0
+	if count := strings.Count(q.MainText, "不"); count > 0 {
+		q.Antonym = count%2 == 0
+	}
 }
 
 func (q *Question) word2key() {
