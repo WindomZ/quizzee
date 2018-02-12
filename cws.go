@@ -1,15 +1,16 @@
 package quizzee
 
-import (
-	"github.com/WindomZ/gcws"
-	_ "github.com/WindomZ/gcws/jieba"
-)
+import "github.com/WindomZ/gcws"
 
 var cws gcws.CWS
 
-func init() {
+func RegisterCWS(names ...string) {
 	var err error
-	cws, err = gcws.NewCWS("jieba")
+	var name string
+	if len(names) != 0 {
+		name = names[0]
+	}
+	cws, err = gcws.NewCWS(name)
 	if err != nil {
 		panic(err)
 	}

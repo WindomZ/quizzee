@@ -1,8 +1,9 @@
-package quizzee
+package tests
 
 import (
 	"testing"
 
+	"github.com/WindomZ/quizzee"
 	"github.com/WindomZ/testify/assert"
 )
 
@@ -44,7 +45,7 @@ var results = []QuestionTest{
 
 func TestQuestion_Parse(t *testing.T) {
 	for _, r := range results {
-		q := NewQuestion(r.Text)
+		q := quizzee.NewQuestion(r.Text)
 		assert.NoError(t, q.Parse())
 		//t.Logf("%#v", q)
 		assert.Equal(t, r.Keys, q.Keys)

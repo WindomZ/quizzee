@@ -56,7 +56,7 @@ var (
 )
 
 func getCurrentFileDir() string {
-	_, filePath, _, _ := runtime.Caller(1)
+	_, filePath, _, _ := runtime.Caller(0)
 	return path.Dir(filePath)
 }
 
