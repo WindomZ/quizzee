@@ -19,3 +19,7 @@ func RegisterCWS(names ...string) {
 		FilterStopWords: true,
 	})
 }
+
+func HasCWS() bool {
+	return cws != nil
+}
