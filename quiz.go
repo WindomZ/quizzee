@@ -7,7 +7,6 @@ import (
 	"net/url"
 	"os"
 	"sync"
-	"time"
 )
 
 type Quiz struct {
@@ -29,8 +28,6 @@ func NewQuiz(question string, answers []string) (qa *Quiz, err error) {
 	}
 	return
 }
-
-const Timeout = time.Second * 3
 
 func (Quiz) request(url string) (body []byte, err error) {
 	c := &http.Client{
@@ -92,13 +89,6 @@ func (qa *Quiz) search360(keyword string, factor float64) (err error) {
 	qa.Answers.Score(string(data), factor)
 	return
 }
-
-const (
-	weightBaidu = 0.3
-	weightBing  = 0.5
-	weightSogou = 0.6
-	weight360   = 0.5
-)
 
 func (qa *Quiz) search() {
 	keyword := qa.Question.Keyword()
