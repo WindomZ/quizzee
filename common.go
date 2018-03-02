@@ -11,7 +11,7 @@ func Recommend(question string, answers []string) (recommend int, rates []float6
 
 	// db
 	if HasDB() {
-		q := qdb.GetQuiz(dbTable, question)
+		q := qdb.GetQuiz(question)
 		if q.Completion() {
 			for i, answer := range answers {
 				if answer == q.Answer {
@@ -46,12 +46,12 @@ func Mark(question string, answers []string, answer string) error {
 	}
 	// db
 	if HasDB() {
-		q := qdb.GetQuiz(dbTable, question)
+		q := qdb.GetQuiz(question)
 		if len(answers) != 0 {
 			q.Options = answers
 		}
 		q.Answer = answer
-		return q.Store(dbTable)
+		return q.Store()
 	}
 	return nil
 }

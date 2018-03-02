@@ -6,5 +6,5 @@ import (
 )
 
 func init() {
-	quizzee.RegisterCWS()
+	quizzee.RegisterCWS("jieba")
 }

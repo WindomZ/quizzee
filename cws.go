@@ -4,13 +4,9 @@ import "github.com/WindomZ/gcws"
 
 var cws gcws.CWS
 
-func RegisterCWS(names ...string) {
+func RegisterCWS(name string, paths ...string) {
 	var err error
-	var name string
-	if len(names) != 0 {
-		name = names[0]
-	}
-	cws, err = gcws.NewCWS(name)
+	cws, err = gcws.NewCWS(name, paths...)
 	if err != nil {
 		panic(err)
 	}
