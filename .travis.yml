@@ -8,8 +8,9 @@ before_install:
   - go get github.com/WindomZ/testify/assert
   - go get github.com/mattn/goveralls
 #  - go get github.com/golang/lint/golint
-  - go get github.com/WindomZ/gcws/...
-  - go get github.com/WindomZ/quizzee-db/...
+  - go get github.com/WindomZ/gcws/sego
+  - go get github.com/WindomZ/gcws/jieba
+  - go get github.com/WindomZ/quizzee-db/bolt
 
 script:
   - diff -u <(echo -n) <(gofmt -s -d ./)
