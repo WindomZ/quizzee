@@ -16,6 +16,7 @@ func Recommend(question string, answers []string) (recommend int, rates []float6
 			for i, answer := range answers {
 				if answer == q.Answer {
 					recommend = i
+					break
 				}
 			}
 			if recommend >= 0 {
