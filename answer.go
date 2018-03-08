@@ -33,7 +33,7 @@ func (a *Answer) Parse() error {
 func (a Answer) Score(s string) (count float64) {
 	count = float64(strings.Count(s, a.CroppedText))
 	for _, k := range a.Keys {
-		count += 0.3 * float64(strings.Count(s, k))
+		count += float64(strings.Count(s, k))
 	}
 	return
 }
