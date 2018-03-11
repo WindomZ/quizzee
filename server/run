@@ -1,2 +1,8 @@
 #!/usr/bin/env bash
-go run server.go -t $1 -f $2
+if [ "$1" ] && [ "$2" ];then
+  go run server.go -t "$1" -f "$2"
+elif [ "$1" ];then
+  go run server.go -t "$1"
+else
+  go run server.go
+fi

@@ -11,7 +11,25 @@
 - 第二参数：数据文件位置
 
 ## API
-非常简单，只需两种接口：读/写
+用法非常简单，只需三种接口：[检测](#ping(检测))/[提问](#ask(提问))/[记忆](#answer(记忆))
+
+### Ping(检测)
+用于检测发现服务
+
+请求：
+```bash
+curl -X POST \
+  http://127.0.0.1:8080/ping \
+  -H 'cache-control: no-cache'
+```
+
+响应：
+```json
+{
+    "errcode": 0,
+    "errmsg": ""
+}
+```
 
 ### Ask(提问)
 - 入参：`question`(问题)和`options`(选项)

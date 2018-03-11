@@ -12,6 +12,12 @@ import (
 
 const port = 8080
 
+func handlerPing(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+	var resp quizzee.Response
+	w.Write(resp.Bytes())
+}
+
 func handlerRoot(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 
@@ -51,7 +57,7 @@ func handlerRoot(w http.ResponseWriter, r *http.Request) {
 func main() {
 	var tableName, dataPath string
 	flag.StringVar(&tableName, "t", "quizzee", "the table name of database")
-	flag.StringVar(&dataPath, "f", "./data/quizzee.db", "the path of database file")
+	flag.StringVar(&dataPath, "f", "../data/quizzee.db", "the path of database file")
 
 	flag.Parse()
 
@@ -62,6 +68,7 @@ func main() {
 
 	fmt.Println("listen the port:", port)
 
+	http.HandleFunc("/ping", handlerPing)
 	http.HandleFunc("/", handlerRoot)
 	if err := http.ListenAndServe(fmt.Sprintf(":%v", port), nil); err != nil {
 		panic(err)

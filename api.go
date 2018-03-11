@@ -5,7 +5,7 @@ import "encoding/json"
 type Response struct {
 	ErrCode int      `json:"errcode"`
 	ErrMsg  string   `json:"errmsg"`
-	Data    *Request `json:"data"`
+	Data    *Request `json:"data,omitempty"`
 }
 
 func (r Response) Bytes() []byte {
