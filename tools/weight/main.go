@@ -44,6 +44,8 @@ func main() {
 	idx := 0
 	sum := quizzee_db.Count()
 	err = quizzee_db.Iterator(func(q *quizzee_db.Quiz) bool {
+		idx++
+
 		quiz, err := quizzee.NewQuiz(q.Question, q.Options)
 		if err != nil {
 			return false
@@ -120,7 +122,6 @@ func main() {
 
 		wg.Wait()
 
-		idx++
 		fmt.Printf("[%.3f%%] %d/%d\n", float64(idx)/float64(sum), idx, sum)
 		return idx <= size
 	})
