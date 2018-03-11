@@ -1,14 +1,14 @@
 # quizzee
 
-> 问答题辅助Go方案 - 开箱即用、推荐引擎、嵌入式存储、RESTful API
+> 问答题辅助方案 - 开箱即用、推荐引擎、嵌入式存储、RESTful API
 
 [![Build Status](https://travis-ci.org/WindomZ/quizzee.svg?branch=master)](https://travis-ci.org/WindomZ/quizzee)
 
-该项目为基础服务方案，为各种问答题辅助项目，统一提供了`推荐`与`记忆`两个核心技术库服务。
+该项目是基础服务方案，目的是为各种问答题辅助项目，统一提供了`推荐`与`记忆`两个核心技术库服务。
 
-提供两种接入方式：
-- 原生Go
+提供`两种`接入方式：
 - RESTful [API](#api)
+- [原生Go用法](#usage)
 
 ## Features
 - [x] `1问题+N选项`的答题模式
@@ -23,10 +23,10 @@ go get github.com/WindomZ/quizzee/...
 ```
 
 ## API
-详见[API](./server)服务和文档
+跨语言方案，详见[API服务和文档](./server)
 
 ## Usage
-两种模式支持：
+原生Go方案，两种模式支持：
 1. [开箱即用](#zero-configuration-usage) - 纯Go实现，快速应用各平台
 1. [自行配置](#advanced-usage) - 配置方案，可能需要cgo编译
 
