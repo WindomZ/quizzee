@@ -1,25 +1,36 @@
 # quizzee
 
-> 问答题辅助Go方案 - 开箱即用、推荐引擎、嵌入式存储
+> 问答题辅助Go方案 - 开箱即用、推荐引擎、嵌入式存储、RESTful API
 
 [![Build Status](https://travis-ci.org/WindomZ/quizzee.svg?branch=master)](https://travis-ci.org/WindomZ/quizzee)
 
+该项目为基础服务方案，为各种问答题辅助项目，统一提供了`推荐`与`记忆`两个核心技术库服务。
+
+提供两种接入方式：
+- 原生Go
+- RESTful [API](#api)
+
 ## Features
 - [x] `1问题+N选项`的答题模式
-- [x] [`quizzeer`](#usage(zero-configuration))零配置支持
-- [x] 4种国内[`搜索引擎`](#search-engine)支持
-- [x] 5种嵌入式[`数据库`](#database)支持
+- [x] 推荐`择优`+`答案`记忆
+- [x] RESTful [API](#api)
+- [x] 4种国内主流[`搜索引擎`](#search-engine)支持
+- [x] 5种跨平台嵌入式[`数据库`](#database)支持
 
 ## Install
 ```bash
 go get github.com/WindomZ/quizzee/...
 ```
 
-两种模式支持：
-1. [开箱即用](#usage(zero-configuration)) - 纯Go实现，快速应用
-1. [自行配置](#advanced-usage) - 配置方案，可能需要cgo支持
+## API
+详见[API](./server)服务和文档
 
-## Usage(zero configuration)
+## Usage
+两种模式支持：
+1. [开箱即用](#zero-configuration-usage) - 纯Go实现，快速应用各平台
+1. [自行配置](#advanced-usage) - 配置方案，可能需要cgo编译
+
+### Zero configuration usage
 ```
 import "github.com/WindomZ/quizzee/quizzeer"
 
@@ -44,7 +55,7 @@ quizzeer.Mark(
 )
 ```
 
-## Advanced usage
+### Advanced usage
 ```
 import (
 	_ "github.com/WindomZ/gcws/sego"
@@ -84,12 +95,12 @@ quizzee.Mark(
 ## Database
 详见[quizzee-db](https://github.com/WindomZ/quizzee-db) - 相关数据库支持
 
+## Related
+- [tools-weight](./tools/weight) - 搜索权重计算工具
+
 ## Contributing
 欢迎你提交PR。
 
 也可以在[issues](https://github.com/WindomZ/quizzee/issues)汇报Bugs，提出新想法、新要求或者讨论问题。
 
 如果你喜欢这个项目，可以点下 :star: 予以支持！
-
-## License
-[MIT](https://github.com/WindomZ/quizzee/blob/master/LICENSE)
