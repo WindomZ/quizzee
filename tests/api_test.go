@@ -1,14 +1,15 @@
-package quizzee
+package tests
 
 import (
 	"encoding/json"
 	"testing"
 
+	"github.com/WindomZ/quizzee"
 	"github.com/WindomZ/testify/assert"
 )
 
 func TestResponse_Bytes(t *testing.T) {
-	resp := &Response{
+	resp := &quizzee.Response{
 		ErrCode: 1,
 		ErrMsg:  "error",
 	}
@@ -18,14 +19,14 @@ func TestResponse_Bytes(t *testing.T) {
 }
 
 func TestRequest_Fail(t *testing.T) {
-	req := &Request{}
+	req := &quizzee.Request{}
 	resp := req.Fail(1, "error")
 	assert.Equal(t, 1, resp.ErrCode)
 	assert.Equal(t, "error", resp.ErrMsg)
 }
 
 func TestRequest_Success(t *testing.T) {
-	req := &Request{}
+	req := &quizzee.Request{}
 	resp := req.Success()
 	assert.Empty(t, resp.ErrCode)
 	assert.Empty(t, resp.ErrMsg)
