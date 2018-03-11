@@ -4,7 +4,7 @@
 
 [![Build Status](https://travis-ci.org/WindomZ/quizzee.svg?branch=master)](https://travis-ci.org/WindomZ/quizzee)
 
-该项目是基础服务方案，目的是为各种问答题辅助项目，统一提供了`推荐`与`记忆`两个核心技术库服务。
+目的是为各类问答题辅助项目，统一提供`推荐`与`记忆`两个核心服务解决方案，高效且稳定。
 
 提供`两种`接入方式：
 - RESTful [API](#api)
