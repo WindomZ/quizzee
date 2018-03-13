@@ -25,6 +25,19 @@ go get github.com/WindomZ/quizzee/...
 ## API
 跨语言方案，详见[API服务和文档](./server)
 
+推荐下面Docker方案
+
+### Docker
+构建镜像
+```bash
+docker build -t quizzee/server .
+```
+
+运行容器
+```bash
+docker run -d -p 8080:8080 --name quizzee-server quizzee/server
+```
+
 ## Usage
 原生Go方案，两种模式支持：
 1. [开箱即用](#zero-configuration-usage) - 纯Go实现，快速应用各平台

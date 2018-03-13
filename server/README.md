@@ -88,7 +88,19 @@ curl -X POST \
 ```
 
 ## Usage
-目前只有命令行([CLI](#cli))的用法，后续提供Docker的实现。
+- 虚拟容器[Docker](#docker)(推荐)
+- 命令行([CLI](#cli))
+
+### Docker
+构建镜像
+```bash
+docker build -t quizzee/server .
+```
+
+运行容器
+```bash
+docker run -d -p 8080:8080 --name quizzee-server quizzee/server
+```
 
 ### CLI
 命令行格式
