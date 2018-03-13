@@ -1,14 +1,14 @@
 package quizzeer
 
 import (
-	_ "github.com/WindomZ/gcws/jieba"
+	_ "github.com/WindomZ/gcws/sego"
 	"github.com/WindomZ/quizzee"
 	"github.com/WindomZ/quizzee-db"
 	_ "github.com/WindomZ/quizzee-db/bolt"
 )
 
 func init() {
-	quizzee.RegisterCWS("jieba")
+	quizzee.RegisterCWS("sego", "../dict/sego.txt")
 }
 
 func RegisterDB(name string, paths ...string) {

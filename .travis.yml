@@ -9,7 +9,6 @@ before_install:
   - go get github.com/mattn/goveralls
 #  - go get github.com/golang/lint/golint
   - go get github.com/WindomZ/gcws/sego
-  - go get github.com/WindomZ/gcws/jieba
   - go get github.com/WindomZ/quizzee-db/bolt
 
 script:

@@ -8,7 +8,7 @@ import (
 	"sync"
 	"time"
 
-	_ "github.com/WindomZ/gcws/jieba"
+	_ "github.com/WindomZ/gcws/sego"
 	"github.com/WindomZ/quizzee"
 	"github.com/WindomZ/quizzee-db"
 	_ "github.com/WindomZ/quizzee-db/bolt"
@@ -20,7 +20,7 @@ const (
 )
 
 func main() {
-	quizzee.RegisterCWS("jieba")
+	quizzee.RegisterCWS("sego")
 
 	dir, err := os.Getwd()
 	if err != nil {
