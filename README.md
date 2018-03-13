@@ -71,13 +71,13 @@ quizzeer.Mark(
 ### Advanced usage
 ```
 import (
-	_ "github.com/WindomZ/gcws/sego"
+	_ "github.com/WindomZ/gcws/jieba"
 	"github.com/WindomZ/quizzee"
 	_ "github.com/WindomZ/quizzee-db/bolt"
 )
 
 // 初始化搜索
-quizzee.RegisterCWS("sego")
+quizzee.RegisterCWS("jieba")
 // 初始化数据库
 quizzee.RegisterDB("testing", "../data/data.db") // 配置表名和文件路径
 ...

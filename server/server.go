@@ -61,12 +61,12 @@ func main() {
 
 	flag.Parse()
 
-	fmt.Printf("load the database: '%s' in '%s'\n", tableName, dataPath)
+	fmt.Printf("load database: '%s' in '%s'\n", tableName, dataPath)
 
 	quizzeer.RegisterDB(tableName, dataPath)
 	defer quizzeer.CloseDB()
 
-	fmt.Println("listen the port:", port)
+	fmt.Println("listen port:", port)
 
 	http.HandleFunc("/ping", handlerPing)
 	http.HandleFunc("/", handlerRoot)

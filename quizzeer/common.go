@@ -1,6 +1,9 @@
 package quizzeer
 
 import (
+	"path/filepath"
+	"runtime"
+
 	_ "github.com/WindomZ/gcws/sego"
 	"github.com/WindomZ/quizzee"
 	"github.com/WindomZ/quizzee-db"
@@ -8,7 +11,9 @@ import (
 )
 
 func init() {
-	quizzee.RegisterCWS("sego", "../dict/sego.txt")
+	_, filePath, _, _ := runtime.Caller(0)
+	quizzee.RegisterCWS("sego",
+		filepath.Join(filepath.Dir(filepath.Dir(filePath)), "dict", "sego.txt"))
 }
 
 func RegisterDB(name string, paths ...string) {
