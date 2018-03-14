@@ -1,10 +1,7 @@
 {
-	"ImportPath": "github.com/WindomZ/quizzee",
+	"ImportPath": "github.com/WindomZ/quizzee/server",
 	"GoVersion": "go1.9",
 	"GodepVersion": "v80",
-	"Packages": [
-		"github.com/WindomZ/quizzee/quizzeer"
-	],
 	"Deps": [
 		{
 			"ImportPath": "github.com/WindomZ/gcws",
@@ -23,6 +20,10 @@
 			"Rev": "29a0de74a259c760dd9f81d2971fa64e444e3856"
 		},
 		{
+			"ImportPath": "github.com/WindomZ/quizzee",
+			"Rev": "56ffa2c972bbe15066594dcb45fb4da5fc1e3f00"
+		},
+		{
 			"ImportPath": "github.com/WindomZ/quizzee-db",
 			"Rev": "903cf0dd181ad67b85f5319b40a98af7fc9805d5"
 		},
@@ -31,9 +32,8 @@
 			"Rev": "903cf0dd181ad67b85f5319b40a98af7fc9805d5"
 		},
 		{
-			"ImportPath": "github.com/WindomZ/testify/assert",
-			"Comment": "v1.1.4-105-gbe8372a",
-			"Rev": "be8372ae8ec5c6daaed3cc28ebf73c54b737c240"
+			"ImportPath": "github.com/WindomZ/quizzee/quizzeer",
+			"Rev": "56ffa2c972bbe15066594dcb45fb4da5fc1e3f00"
 		},
 		{
 			"ImportPath": "github.com/adamzy/cedar-go",
@@ -45,18 +45,8 @@
 			"Rev": "9da31745363232bc1e27dbab3569e77383a51585"
 		},
 		{
-			"ImportPath": "github.com/davecgh/go-spew/spew",
-			"Comment": "v1.1.0-12-g8991bc2",
-			"Rev": "8991bc29aa16c548c550c7ff78260e27b9ab7c73"
-		},
-		{
 			"ImportPath": "github.com/huichen/sego",
-			"Rev": "bbb15aaa18520804661e4e90ad8af1efadba58d7"
-		},
-		{
-			"ImportPath": "github.com/pmezard/go-difflib/difflib",
-			"Comment": "v1.0.0",
-			"Rev": "792786c7400a136282c1664665ae0a8db921c6c2"
+			"Rev": "1096a43cd61f719de8f053b37afda7ca7b8629fc"
 		},
 		{
 			"ImportPath": "golang.org/x/sys/unix",

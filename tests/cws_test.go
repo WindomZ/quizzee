@@ -1,10 +1,10 @@
 package tests
 
 import (
-	_ "github.com/WindomZ/gcws/sego"
+	_ "github.com/WindomZ/gcws/jieba"
 	"github.com/WindomZ/quizzee"
 )
 
 func init() {
-	quizzee.RegisterCWS("sego")
+	quizzee.RegisterCWS("jieba")
 }

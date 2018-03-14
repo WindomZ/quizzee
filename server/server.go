@@ -57,14 +57,14 @@ func handlerRoot(w http.ResponseWriter, r *http.Request) {
 func main() {
 	var tableName, dataPath string
 	flag.StringVar(&tableName, "t", "quizzee", "the table name of database")
-	flag.StringVar(&dataPath, "f", "../data/quizzee.db", "the path of database file")
+	flag.StringVar(&dataPath, "f", "quizzee.db", "the path of database file")
 
 	flag.Parse()
 
 	fmt.Printf("load database: '%s' in '%s'\n", tableName, dataPath)
 
-	quizzeer.RegisterDB(tableName, dataPath)
-	defer quizzeer.CloseDB()
+	quizzeer.Register(tableName, dataPath, "sego.txt")
+	defer quizzeer.Close()
 
 	fmt.Println("listen port:", port)
 

@@ -35,7 +35,7 @@ var results = []QuestionTest{
 	},
 	{
 		Text: "下列哪一部不是李安导演的作品？",
-		Keys: []string{"李安", "作品"},
+		Keys: []string{"李安", "导演", "作品"},
 	},
 	{
 		Text: "度量衡是我国的计量单位，其中的衡指哪个方面的标准？",

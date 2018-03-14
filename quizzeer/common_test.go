@@ -6,8 +6,8 @@ import (
 	"github.com/WindomZ/testify/assert"
 )
 
-func TestRegisterDB(t *testing.T) {
-	RegisterDB("testing", "../data/data.db")
+func TestRegister(t *testing.T) {
+	Register("testing", "../data/data.db")
 }
 
 func TestRecommend(t *testing.T) {
@@ -29,6 +29,6 @@ func TestMark(t *testing.T) {
 	))
 }
 
-func TestCloseDB(t *testing.T) {
-	assert.NoError(t, CloseDB())
+func TestClose(t *testing.T) {
+	assert.NoError(t, Close())
 }
