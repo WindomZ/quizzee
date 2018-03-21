@@ -13,15 +13,15 @@
 		},
 		{
 			"ImportPath": "github.com/WindomZ/gkv",
-			"Rev": "29a0de74a259c760dd9f81d2971fa64e444e3856"
+			"Rev": "535183f8d955fed3f847ace3ec76c814e6fb60a8"
 		},
 		{
 			"ImportPath": "github.com/WindomZ/gkv/bolt",
-			"Rev": "29a0de74a259c760dd9f81d2971fa64e444e3856"
+			"Rev": "535183f8d955fed3f847ace3ec76c814e6fb60a8"
 		},
 		{
 			"ImportPath": "github.com/WindomZ/quizzee",
-			"Rev": "56ffa2c972bbe15066594dcb45fb4da5fc1e3f00"
+			"Rev": "22eb9305f164d45f3b73dd52acd70d50e3e6dcef"
 		},
 		{
 			"ImportPath": "github.com/WindomZ/quizzee-db",
@@ -33,7 +33,7 @@
 		},
 		{
 			"ImportPath": "github.com/WindomZ/quizzee/quizzeer",
-			"Rev": "56ffa2c972bbe15066594dcb45fb4da5fc1e3f00"
+			"Rev": "22eb9305f164d45f3b73dd52acd70d50e3e6dcef"
 		},
 		{
 			"ImportPath": "github.com/adamzy/cedar-go",

@@ -8,13 +8,14 @@ import (
 type Quiz struct {
 	Question Question
 	Answers  Answers
-	lock     sync.Mutex
+	lock     *sync.Mutex
 }
 
 func NewQuiz(question string, answers []string) (qa *Quiz, err error) {
 	qa = &Quiz{
 		Question: *NewQuestion(question),
 		Answers:  *NewAnswers(answers),
+		lock:     new(sync.Mutex),
 	}
 	if err = qa.Question.Parse(); err != nil {
 		return

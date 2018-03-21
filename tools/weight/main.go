@@ -63,7 +63,7 @@ func main() {
 		wg.Add(4)
 
 		// Baidu
-		go func(quiz quizzee.Quiz) {
+		go func(quiz *quizzee.Quiz) {
 			quiz.Search(func(s string) float64 {
 				if s == quizzee.SearchEngineBaidu {
 					return 1
@@ -74,10 +74,10 @@ func main() {
 				result[quizzee.SearchEngineBaidu]++
 			}
 			wg.Done()
-		}(*quiz)
+		}(quiz)
 
 		// Bing
-		go func(quiz quizzee.Quiz) {
+		go func(quiz *quizzee.Quiz) {
 			quiz.Search(func(s string) float64 {
 				if s == quizzee.SearchEngineBing {
 					return 1
@@ -88,10 +88,10 @@ func main() {
 				result[quizzee.SearchEngineBing]++
 			}
 			wg.Done()
-		}(*quiz)
+		}(quiz)
 
 		// Sogou
-		go func(quiz quizzee.Quiz) {
+		go func(quiz *quizzee.Quiz) {
 			quiz.Search(func(s string) float64 {
 				if s == quizzee.SearchEngineSogou {
 					return 1
@@ -102,10 +102,10 @@ func main() {
 				result[quizzee.SearchEngineSogou]++
 			}
 			wg.Done()
-		}(*quiz)
+		}(quiz)
 
 		// 360
-		go func(quiz quizzee.Quiz) {
+		go func(quiz *quizzee.Quiz) {
 			quiz.Search(func(s string) float64 {
 				if s == quizzee.SearchEngine360 {
 					return 1
@@ -116,7 +116,7 @@ func main() {
 				result[quizzee.SearchEngine360]++
 			}
 			wg.Done()
-		}(*quiz)
+		}(quiz)
 
 		time.Sleep(time.Millisecond * time.Duration(500+rand.Int63n(2000)))
 

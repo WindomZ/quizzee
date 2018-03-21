@@ -136,7 +136,6 @@ func (seg *Segmenter) Segment(bytes []byte) []Segment {
 	return seg.internalSegment(bytes, false)
 }
 
-
 func (seg *Segmenter) InternalSegment(bytes []byte, searchMode bool) []Segment {
 	return seg.internalSegment(bytes, searchMode)
 }
